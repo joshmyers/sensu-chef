@@ -28,7 +28,7 @@ module Sensu
         sanitized
       end
 
-      def gem_binary
+      def gem_binary(node)
         if File.exists?("/opt/sensu/embedded/bin/gem") && node["sensu"]["use_embedded_ruby"]
           "/opt/sensu/embedded/bin/gem"
         else
